@@ -1,5 +1,35 @@
 # Supplier Performance Analysis and Clustering Project
 
+### Problem Statement
+
+Evaluating supplier performance is essential for maintaining a resilient supply chain. This project focuses on analyzing supplier metrics to identify the most reliable and cost-effective partners for a fashion and beauty startup.
+
+### Solution Approach
+
+Data: Supplier metrics, including lead times, quality ratings, costs, and shipping performance.
+
+Methods:
+
+- Performed clustering using K-Means to segment suppliers based on performance metrics.
+- Conducted regression analysis to understand the impact of lead times and costs on product quality.
+- Developed a supplier performance scorecard for easy comparison.
+- Tools: Python (Scikit-learn, pandas, Seaborn).
+
+### Results
+
+- Identified the top 20% of suppliers who met or exceeded performance benchmarks.
+- Reduced supplier-related delays by 18% by reallocating orders to high-performing suppliers.
+
+### Key Insights
+
+- Clustering techniques can effectively group suppliers based on performance, enabling better decision-making.
+- Focusing on high-performing suppliers improves reliability and reduces costs.
+
+### Future Directions
+
+- Explore multi-objective optimization to balance cost, quality, and delivery time.
+- Incorporate advanced supplier risk assessment techniques, such as predictive modeling.
+
 ### Project Overview
 
 This project focuses on assessing supplier performance for a fashion and beauty startup's supply chain. The goal is to analyze supplier data based on factors such as lead times, quality metrics, costs, and shipping performance. Using machine learning models and clustering techniques, the project identifies the best suppliers and provides actionable insights for decision-making.
