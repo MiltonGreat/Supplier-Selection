@@ -1,38 +1,14 @@
 # Supplier Performance Analysis and Clustering Project
 
-### Problem Statement
-
-Evaluating supplier performance is essential for maintaining a resilient supply chain. This project focuses on analyzing supplier metrics to identify the most reliable and cost-effective partners for a fashion and beauty startup.
-
-### Solution Approach
-
-Data: Supplier metrics, including lead times, quality ratings, costs, and shipping performance.
-
-Methods:
-
-- Performed clustering using K-Means to segment suppliers based on performance metrics.
-- Conducted regression analysis to understand the impact of lead times and costs on product quality.
-- Developed a supplier performance scorecard for easy comparison.
-- Tools: Python (Scikit-learn, pandas, Seaborn).
-
-### Results
-
-- Identified the top 20% of suppliers who met or exceeded performance benchmarks.
-- Reduced supplier-related delays by 18% by reallocating orders to high-performing suppliers.
-
-### Key Insights
-
-- Clustering techniques can effectively group suppliers based on performance, enabling better decision-making.
-- Focusing on high-performing suppliers improves reliability and reduces costs.
-
-### Future Directions
-
-- Explore multi-objective optimization to balance cost, quality, and delivery time.
-- Incorporate advanced supplier risk assessment techniques, such as predictive modeling.
-
 ### Project Overview
 
-This project focuses on assessing supplier performance for a fashion and beauty startup's supply chain. The goal is to analyze supplier data based on factors such as lead times, quality metrics, costs, and shipping performance. Using machine learning models and clustering techniques, the project identifies the best suppliers and provides actionable insights for decision-making.
+The project aims to analyze supplier performance by evaluating factors like defect rates, lead times, and cost efficiency. We employ machine learning models to predict supplier reliability and optimize the allocation of orders. This will help in decision-making by selecting suppliers who meet cost and delivery expectations while minimizing risk.
+
+Key components:
+
+- Supplier defect rates and lead times
+- Order reallocation for optimized performance
+- Predictive modeling for supplier selection and evaluation
 
 #### Key Objectives
 
@@ -44,6 +20,10 @@ Evaluate supplier performance based on:
 - Use classification models to predict supplier categories.
 - Apply clustering to group suppliers into performance-based clusters.
 - Visualize supplier data and clustering results to highlight patterns and insights.
+
+### Problem Statement
+
+Evaluating supplier performance is essential for maintaining a resilient supply chain. This project focuses on analyzing supplier metrics to identify the most reliable and cost-effective partners for a fashion and beauty startup.
 
 ### Dataset
 
@@ -57,51 +37,40 @@ The dataset contains information related to a supply chain of makeup products, w
 - Manufacturing Costs and Defect Rates
 - Shipping Times, Costs, and Transportation Modes
 
-### Methodology
+### Solution Approach
 
-1. Data Inspection
-Handling missing values:
-- Median imputation for numerical features.
-- Mode imputation for categorical features.
+#### Features and Preprocessing
 
-2. Data Exploration
-- Visualized feature distributions using histograms and box plots.
-- Correlation heatmap for numerical features.
+- Defect Rate: This is a key feature that reflects supplier reliability. We performed feature scaling and encoded categorical variables (e.g., supplier names).
 
-3. Feature Engineering
-Created new features:
-- Cost per Unit: Manufacturing Costs / Production Volumes
-- Defect Rate (%): Defect Rates * 100
-- Lead Time Efficiency: 1 / (1 + Lead Times)
-- Normalized selected features using Min-Max Scaling.
+- Lead Times: We optimized lead times by reallocating orders among suppliers to reduce delays.
 
-4. Machine Learning
+- Feature Engineering: New features were created, including:
+    - Defect Rate (%)
+    - Lead Time Efficiency
 
-Classification: Trained a Random Forest Classifier to predict supplier categories.
-- Achieved an accuracy of XX% on the test set.
-- Identified key performance drivers using feature importance.
+Preprocessing steps involved encoding categorical variables, handling missing values, and normalizing continuous features.
 
-Clustering:
-- Applied K-Means Clustering to group suppliers into three clusters.
-- Evaluated clustering quality using the Silhouette Score (0.XX).
+#### Modeling
 
-5. Visualization
+The project involves training a classification model to predict supplier reliability based on various features. We used the following steps:
 
-- Visualized clusters with scatter plots and pair plots.
-- Highlighted key feature importance for supplier classification.
+- Data Splitting: We divided the data into training (80%) and testing (20%) sets.
+- Modeling Approach: Initially, we used a basic classification model (e.g., Random Forest, Logistic Regression) and evaluated it using accuracy, precision, recall, and F1-score metrics.
+- Feature Importance: We analyzed the importance of different features, highlighting manufacturing costs, order quantities, and product availability.
 
 ### Results
 
-Random Forest Classification
-- Accuracy: 85%
-- Top features driving classification: Cost per Unit, Defect Rate (%), Lead Time Efficiency, Shipping Costs
+- Identified the top 20% of suppliers who met Defect Rate (Supplier 3	- 0.226410, Supplier 4 - 0.398177, Supplier - 0.021170).
+  
+- Updated Lead Times After Order Reallocation: Lead times were optimized for suppliers based on defect rates and historical performance.
 
-K-Means Clustering
-- Grouped suppliers into three clusters based on performance metrics.
-- Clusters provided insights into supplier groupings:
-- Cluster 0: High-performing suppliers.
-- Cluster 1: Moderate-performing suppliers.
-- Cluster 2: Low-performing suppliers.
+- Feature Importance: most important features influencing supplier performance include:
+  - Manufacturing costs	(0.049958)
+  - Order quantities	(0.043991)
+  - Price	(0.042869)
+  - Availability	(0.042432)
+  - Number of products sold
 
 ### Source
 
