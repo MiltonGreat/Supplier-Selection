@@ -1,14 +1,8 @@
-# Supplier Performance Analysis and Clustering Project
+# Supplier Performance Analysis 
 
 ### Project Overview
 
-The project aims to analyze supplier performance by evaluating factors like defect rates, lead times, and cost efficiency. We employ machine learning models to predict supplier reliability and optimize the allocation of orders. This will help in decision-making by selecting suppliers who meet cost and delivery expectations while minimizing risk.
-
-Key components:
-
-- Supplier defect rates and lead times
-- Order reallocation for optimized performance
-- Predictive modeling for supplier selection and evaluation
+This project aims to analyze supply chain data to gain insights into supplier performance, identify key cost drivers, and uncover patterns that can optimize operational efficiency. By leveraging advanced machine learning techniques and thorough data exploration, we provide strategic insights to enhance procurement and supplier selection processes.
 
 #### Key Objectives
 
@@ -20,10 +14,6 @@ Evaluate supplier performance based on:
 - Use classification models to predict supplier categories.
 - Apply clustering to group suppliers into performance-based clusters.
 - Visualize supplier data and clustering results to highlight patterns and insights.
-
-### Problem Statement
-
-Evaluating supplier performance is essential for maintaining a resilient supply chain. This project focuses on analyzing supplier metrics to identify the most reliable and cost-effective partners for a fashion and beauty startup.
 
 ### Dataset
 
@@ -37,33 +27,29 @@ The dataset contains information related to a supply chain of makeup products, w
 - Manufacturing Costs and Defect Rates
 - Shipping Times, Costs, and Transportation Modes
 
-### Solution Approach
+### Workflow
 
 #### Features and Preprocessing
 
-- Defect Rate: This is a key feature that reflects supplier reliability. We performed feature scaling and encoded categorical variables (e.g., supplier names).
+1. Data Preprocessing: Cleaning and encoding categorical variables, handling missing values, and scaling numerical features.
 
-- Lead Times: We optimized lead times by reallocating orders among suppliers to reduce delays.
+2. Feature Engineering: Creating new features like Cost per Unit, Defect Rate, and Lead Time Efficiency.
 
-- Feature Engineering: New features were created, including:
-    - Defect Rate (%)
-    - Lead Time Efficiency
+3. Modeling: Using machine learning algorithms to predict supplier performance and identify key cost drivers.
 
-Preprocessing steps involved encoding categorical variables, handling missing values, and normalizing continuous features.
+4. Evaluation: Assessing model performance using accuracy, precision, recall, and f1-score metrics.
 
-#### Modeling
+### Key Findings
 
-The project involves training a classification model to predict supplier reliability based on various features. We used the following steps:
+- Price and Lead Time were identified as the most influential factors affecting supplier performance, emphasizing the need for cost management and efficient logistics.
 
-- Data Splitting: We divided the data into training (80%) and testing (20%) sets.
-- Modeling Approach: Initially, we used a basic classification model (e.g., Random Forest, Logistic Regression) and evaluated it using accuracy, precision, recall, and F1-score metrics.
-- Feature Importance: We analyzed the importance of different features, highlighting manufacturing costs, order quantities, and product availability.
+- Other important features include Availability and Manufacturing Costs, highlighting opportunities for inventory optimization and cost reduction.
+
+- The model's accuracy was 35%, indicating room for improvement through advanced algorithms, hyperparameter tuning, or additional feature engineering.
 
 ### Results
 
-- Identified the top 20% of suppliers who met Defect Rate (Supplier 3	- 0.226410, Supplier 4 - 0.398177, Supplier - 0.021170).
-  
-- Updated Lead Times After Order Reallocation: Lead times were optimized for suppliers based on defect rates and historical performance.
+- Accuracy: 35%, Precision and Recall varied across classes, indicating potential class imbalance or model limitations.
 
 - Feature Importance: most important features influencing supplier performance include:
   - Manufacturing costs	(0.049958)
