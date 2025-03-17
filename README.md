@@ -1,31 +1,29 @@
-# Supplier Performance Analysis 
+# Supplier Evaluation and Selection 
 
 ### Project Overview
 
-This project aims to analyze supply chain data to gain insights into supplier performance, identify key cost drivers, and uncover patterns that can optimize operational efficiency. By leveraging advanced machine learning techniques and thorough data exploration, we provide strategic insights to enhance procurement and supplier selection processes.
+This project focuses on evaluating and selecting suppliers based on various performance metrics using data science techniques. The goal is to identify the best suppliers by analyzing factors such as quality, price, delivery time, financial health, and more. The project involves data preprocessing, feature engineering, machine learning modeling, and cluster analysis to derive actionable insights.
 
-#### Key Objectives
+#### Project Objectives
 
-Evaluate supplier performance based on:
-- Cost per Unit
-- Defect Rate (%)
-- Lead Time Efficiency
-- Shipping Costs
-- Use classification models to predict supplier categories.
-- Apply clustering to group suppliers into performance-based clusters.
-- Visualize supplier data and clustering results to highlight patterns and insights.
-
+- Evaluate Supplier Performance: Analyze supplier data to identify key performance metrics.
+- Feature Engineering: Create new features to enhance the dataset and improve model performance.
+- Machine Learning Modeling: Train and evaluate models to predict supplier performance.
+- Cluster Analysis: Group suppliers into clusters based on their characteristics for targeted selection.
+  
 ### Dataset
 
-Dataset Name: supply_chain_data.csv
+The dataset contains information about suppliers and their performance across various metrics, including:
 
-The dataset contains information related to a supply chain of makeup products, with features such as:
-
-- Product Type, SKU, and Price
-- Supplier Name and Location
-- Stock Levels and Production Volumes
-- Manufacturing Costs and Defect Rates
-- Shipping Times, Costs, and Transportation Modes
+- Quality: Quality score of the supplier.
+- Quantity: Quantity of goods or services supplied.
+- Price: Price of goods or services.
+- Delivery Time: Time taken to deliver goods or services.
+- Financial Condition: Financial health of the supplier.
+- Serviceability: Responsiveness and communication of the supplier.
+- Reputation: Reputation and competence of the supplier.
+- Flexibility: Adaptability of the supplier.
+- Location: Supplier’s location and traffic connections.
 
 ### Workflow
 
@@ -35,29 +33,29 @@ The dataset contains information related to a supply chain of makeup products, w
 
 2. Feature Engineering: Creating new features like Cost per Unit, Defect Rate, and Lead Time Efficiency.
 
-3. Modeling: Using machine learning algorithms to predict supplier performance and identify key cost drivers.
+3. Modeling: Train and evaluate models (Linear Regression, Random Forest, Gradient Boosting).
 
-4. Evaluation: Assessing model performance using accuracy, precision, recall, and f1-score metrics.
+4. Cluster Analysis: Use K-Means clustering to group suppliers into clusters based on their characteristics.
 
 ### Key Findings
 
-- Price and Lead Time were identified as the most influential factors affecting supplier performance, emphasizing the need for cost management and efficient logistics.
+1. Feature Importance:
+- The composite_score was the most important feature, contributing 46.6% to the model’s predictions.
+- Other important features included financial condition, serviceability, and price.
 
-- Other important features include Availability and Manufacturing Costs, highlighting opportunities for inventory optimization and cost reduction.
+2. Model Performance:
+- Linear Regression achieved perfect performance, indicating potential data leakage or a trivial problem.
+- Random Forest and Gradient Boosting showed signs of overfitting, with moderate performance on the test set.
 
-- The model's accuracy was 35%, indicating room for improvement through advanced algorithms, hyperparameter tuning, or additional feature engineering.
+3. Cluster Analysis:
+- Cluster 0: High-quality, high-serviceability suppliers.
+- Cluster 1: High-quantity, moderate-quality suppliers.
+- Cluster 2: Low-quality, high-price suppliers.
+- Cluster 3: Low-quantity, low-quality suppliers.
 
-### Results
-
-- Accuracy: 35%, Precision and Recall varied across classes, indicating potential class imbalance or model limitations.
-
-- Feature Importance: most important features influencing supplier performance include:
-  - Manufacturing costs	(0.049958)
-  - Order quantities	(0.043991)
-  - Price	(0.042869)
-  - Availability	(0.042432)
-  - Number of products sold
+4. Cost-Effectiveness:
+- Suppliers with the lowest price_to_quality_ratio were identified as the most cost-effective.
 
 ### Source
 
-https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis/data
+https://www.kaggle.com/datasets/michaelclodeemil/suppliers-ranking-grades/data?select=supplier_ranking_grades.xlsx
